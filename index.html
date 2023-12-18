@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="boxLeft">
+            <h1>Learn to code by watching others</h1>
+            <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+                understanding how developers think is invaluable.</p>
+        </section>
+        <section class="boxRight">
+            <p class="boxWarningUp">Try it free 7 days then $20/mo. thereafter</p>
+            <form action="">
+                <div class="formInput">
+                    <input type="text" placeholder="First Name" id="inputFirstName" class="input" required onblur="error('inputFirstName', 'errorFirstName')">
+                    <span id="errorFirstName" class="error" hidden>First Name                        
+                        <img src="images/icon-error.svg" alt="Icon error" class="imageError">
+                    </span>
+                </div>
+                <div class="formInput">
+                    <input type="text" placeholder="Last Name" id="inputLastName" class="input" required onblur="error('inputLastName', 'errorLastName')">
+                    <span id="errorLastName" class="error" hidden>Last Name
+                        <img src="images/icon-error.svg" alt="Icon error" class="imageError">
+                    </span>
+                </div>
+                <div class="formInput">
+                    <input type="email" name="email" id="inputEmail" placeholder="Email Adress" class="input" required onblur="validateEmail('inputEmail', 'errorEmail')">
+                    <span id="errorEmail" class="error" hidden>Email
+                        <img src="images/icon-error.svg" alt="Icon error" class="imageError">
+                    </span>
+                </div>
+                <div class="formInput">
+                    <input type="password" name="password" id="inputPassword" placeholder="Password" class="input" required onblur="error('inputPassword', 'errorPassword')">
+                    <span id="errorPassword" class="error" hidden>Password
+                        <img src="images/icon-error.svg" alt="Icon error" class="imageError">
+                    </span>
+                </div>
+                <input class="inputBtn" type="button" value="Claim your free trial">
+                <p class="boxWarningDown">By clicking the button, you are agreeing to our <a class="termsServices"
+                        href="#">Terms and Services</a></p>
+            </form>
+        </section>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+
+</html>
