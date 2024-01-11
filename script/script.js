@@ -6,6 +6,8 @@ function validateEmail(inputId, errorId) {
     const errorSpan = document.getElementById(errorId);
     if (emailFormat.test(email) !== true) {
         input.classList.add('inputError');
+        input.removeAttribute('placeholder');
+        input.setAttribute('placeholder', 'email@example/com');
         errorSpan.removeAttribute('hidden');
         var emailErrorMessage = "Looks like this is not an email";
         errorSpan.innerHTML = emailErrorMessage;
@@ -20,6 +22,7 @@ function error(inputId, errorId) {
     const errorSpan = document.getElementById(errorId);
     if (inputValue === '') {
         input.classList.add('inputError');
+        input.removeAttribute('placeholder');
         errorSpan.removeAttribute('hidden');
         var inputName = errorSpan.innerHTML;
         inputName = inputName + ' cannot be empty';
